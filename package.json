@@ -1,0 +1,33 @@
+{
+  "name": "invoice-management-system",
+  "version": "1.0.0",
+  "description": "Comprehensive Invoice Management System with export, cloud sync, and analytics",
+  "main": "index.js",
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "start": "cd backend && npm start",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "migrate": "cd backend && npx prisma migrate dev",
+    "migrate:deploy": "cd backend && npx prisma migrate deploy",
+    "prisma:studio": "cd backend && npx prisma studio",
+    "seed": "cd backend && npx prisma db seed"
+  },
+  "keywords": [
+    "invoice",
+    "management",
+    "accounting",
+    "billing",
+    "pdf-export",
+    "google-drive"
+  ],
+  "author": "Software Architect",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
